@@ -22,13 +22,3 @@ cd HNPFuzzer
 make clean all
 cd llvm_mode && make
 ```
-
-## Usage
-
-HNPFuzzer can be run using the same command line options as AFLNet. However, there are different options shown as below.
-
-- ***-Y***: (optional) disable synchronization based on shared memory
-- ***-I***: (optional) disable message transmission based on shared memory
-- ***-K***: (optional) disable persistent mode checking and send SIGTERM signal to gracefully terminate the server after consuming all request messages
-- ***-b***: (optional) enable the additional crash check. Each time a crash occurs, the fuzzer will disactivate all the components of HNPFuzzer and rerun the target to verify the discovered crash sample. However, this consequently affects the fuzzer's performance.
-
